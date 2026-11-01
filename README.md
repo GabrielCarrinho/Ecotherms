@@ -143,6 +143,7 @@ docs/                                      # anotações de desenvolvimento
 ## Autores
 
 Gabriel Carrinho Faria de Souza · Giovanna Venâncio Domiciano · Lucas Rodrigues Ferreira
+
 Orientador: Prof. Bruno Michel Pera
 
 ## Licença
