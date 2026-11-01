@@ -51,7 +51,7 @@ Kotlin · Android SDK 24–36 · Gradle (Kotlin DSL) · AGP 9.0 · Firebase Auth
 
 ### 1. Clonar
 ```bash
-git clone https://github.com/SEU_USUARIO/Ecotherms.git
+git clone https://github.com/<USER>/Ecotherms.git
 ```
 Abra a pasta no Android Studio (**File ▸ Open**) e aguarde o Gradle Sync.
 
@@ -84,7 +84,7 @@ Regras sugeridas para o Realtime Database:
 ### 3. Chave da Pl@ntNet
 No arquivo `local.properties` (na raiz, já ignorado pelo Git):
 ```properties
-PLANTNET_API_KEY=sua_chave_aqui
+PLANTNET_API_KEY=<api_key>
 ```
 Modelo em `local.properties.example`. Sem a chave, a identificação de plantas retorna erro.
 
