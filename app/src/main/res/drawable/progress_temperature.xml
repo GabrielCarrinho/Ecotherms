@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- fundo da barra -->
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="4dp" />
+            <solid android:color="#0e2920" />
+        </shape>
+    </item>
+
+    <!-- progresso preenchido — laranja para temperatura -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="4dp" />
+                <solid android:color="#0a4513" />
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

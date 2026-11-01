@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6EDE9"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="32dp">
+
+        <!-- Top Bar -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="start|center_vertical"
+                android:background="@drawable/bg_circle_light_gray"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="#1E3A29"
+                android:padding="12dp"
+                android:contentDescription="Voltar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Detalhes da Planta"
+                android:textColor="#1E3A29"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btn_delete_plant"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="end|center_vertical"
+                android:background="@drawable/bg_circle_light_gray"
+                android:src="@drawable/ic_delete"
+                android:padding="11dp"
+                android:contentDescription="Excluir planta" />
+
+        </FrameLayout>
+
+        <!-- Foto -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:id="@+id/ivPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="@drawable/bg_plant_thumb"
+                android:clipToOutline="true"
+                android:outlineProvider="background"
+                android:contentDescription="Foto da planta" />
+
+            <ImageButton
+                android:id="@+id/btn_change_plant_photo"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="14dp"
+                android:background="@drawable/bg_circle_olive"
+                android:src="@drawable/ic_camera"
+                app:tint="#FFFFFF"
+                android:padding="10dp"
+                android:contentDescription="Trocar foto" />
+
+        </FrameLayout>
+
+        <!-- Campo Apelido (editável) -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:layout_marginBottom="14dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="2dp"
+            app:strokeColor="#4E7C59"
+            app:strokeWidth="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp">
+
+                <FrameLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_circle_icon_light">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_plant"
+                        app:tint="#4E7C59" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Apelido"
+                        android:textColor="#7A8C82"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/et_nickname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#1E3A29"
+                        android:textSize="16sp"
+                        android:inputType="textCapSentences"
+                        android:background="@null"
+                        android:padding="0dp"
+                        android:hint="Dê um apelido pra essa planta"
+                        android:textColorHint="#E6EDE9" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Nome científico (somente leitura) -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp">
+
+                <FrameLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_circle_gray_light">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_info"
+                        app:tint="#7A8C82" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nome científico"
+                        android:textColor="#7A8C82"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvScientificReadonly"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#1E3A29"
+                        android:textStyle="italic"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Score + Data -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:id="@+id/tvScoreDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_badge_score"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:textColor="#4E7C59"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDateDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="#7A8C82"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Botão Salvar -->
+        <Button
+            android:id="@+id/btn_save_plant"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@drawable/bg_button_olive_light"
+            android:text="Salvar Alterações"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:drawableStart="@drawable/ic_save"
+            android:drawablePadding="10dp"
+            app:drawableTint="#FFFFFF" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

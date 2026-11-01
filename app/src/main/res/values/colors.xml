@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Paleta oficial Ecotherms -->
+    <color name="verde_escuro">#1E3A29</color>
+    <color name="verde_medio">#4E7C59</color>
+    <color name="verde_claro">#A8D5B2</color>
+    <color name="cinza_claro">#E6EDE9</color>
+
+        <color name="background">#1E3A29</color>
+        <color name="card">#FFFFFF</color>
+        <color name="card_destaque">#4E7C59</color>
+        <color name="divisoria">#4E7C59</color>
+        <color name="texto">#1E3A29</color>
+        <color name="texto_secundario">#7A8C82</color>
+        <color name="texto_claro">#E6EDE9</color>
+        <color name="botao">#1E3A29</color>
+        <color name="nav_bar">#1E3A29</color>
+        <color name= "erro">#992C10</color>
+        <color name= "branco">#FFFFFF</color>
+        <color name="preto">#000000</color>
+        <color name="cinza">#808080</color>
+    <color name="ec_bg">@color/card</color>
+    <color name="ec_surface">@color/card_destaque</color>
+    <color name="ec_primary">@color/botao</color>
+    <color name="ec_on_primary">@color/texto_claro</color>
+    <color name="ec_text">@color/texto</color>
+
+</resources>

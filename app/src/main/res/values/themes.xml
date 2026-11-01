@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.TelaDeLogin" parent="Theme.Ecotherms"/>
+
+    <style name="Theme.Ecotherms" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/card_destaque</item>
+        <item name="colorPrimaryVariant">@color/cardview_dark_background</item>
+        <item name="colorOnPrimary">@color/cardview_light_background</item>
+        <item name="colorSecondary">@color/texto</item>
+        <item name="colorSecondaryVariant">@color/texto</item>
+        <item name="colorOnSecondary">@color/erro</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!--
+        Tema exclusivo da tela de recortar foto (biblioteca externa uCrop).
+        A partir do Android 15/16 o sistema força todo app a desenhar "de ponta a
+        ponta" (edge-to-edge), inclusive embaixo da barra de status. O uCrop é uma
+        biblioteca antiga que nunca tratou isso, então a barra de ferramentas e o
+        botão de salvar ficavam colados atrás do relógio/notificações, difíceis de
+        tocar. Esse tema desativa esse comportamento só nessa tela, voltando ao
+        jeito "clássico" onde o sistema reserva espaço sozinho.
+    -->
+    <style name="Theme.Ecotherms.UCrop" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowOptOutEdgeToEdgeEnforcement">true</item>
+    </style>
+
+</resources>

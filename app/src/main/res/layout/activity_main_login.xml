@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:id="@+id/main"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@color/cinza_claro"
+       tools:context=".MainActivityLogin">
+
+      <!-- Curva verde do topo -->
+      <View
+          android:id="@+id/containerTop"
+          android:layout_width="0dp"
+          android:layout_height="@dimen/login_top_height"
+          android:background="@drawable/background_view_top"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <!-- Plantinhas decorativas, discretas, nos cantos da curva -->
+      <ImageView
+          android:layout_width="30dp"
+          android:layout_height="40dp"
+          android:src="@drawable/ic_plant_decor_small"
+          android:rotation="-8"
+          app:layout_constraintStart_toStartOf="@id/containerTop"
+          app:layout_constraintBottom_toBottomOf="@id/containerTop"
+          android:layout_marginStart="14dp"
+          android:contentDescription="@null" />
+
+      <ImageView
+          android:layout_width="26dp"
+          android:layout_height="34dp"
+          android:src="@drawable/ic_plant_decor_small"
+          android:rotation="10"
+          android:scaleX="-1"
+          app:layout_constraintEnd_toEndOf="@id/containerTop"
+          app:layout_constraintBottom_toBottomOf="@id/containerTop"
+          android:layout_marginEnd="18dp"
+          android:contentDescription="@null" />
+
+      <!-- Logo -->
+      <ImageView
+          android:id="@+id/imageView"
+          android:layout_width="110dp"
+          android:layout_height="110dp"
+          android:src="@drawable/logo_ecotherms"
+          app:layout_constraintBottom_toBottomOf="@id/containerTop"
+          app:layout_constraintEnd_toEndOf="@id/containerTop"
+          app:layout_constraintStart_toStartOf="@id/containerTop"
+          app:layout_constraintTop_toTopOf="@id/containerTop"
+          android:contentDescription="Logo Ecotherms" />
+
+      <!-- Conteúdo -->
+      <LinearLayout
+          android:id="@+id/cardLogin"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="24dp"
+          android:layout_marginEnd="24dp"
+          android:layout_marginTop="24dp"
+          android:orientation="vertical"
+          android:padding="8dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/containerTop">
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="Bem-vindo!"
+             android:textColor="@color/verde_escuro"
+             android:textSize="26sp"
+             android:textStyle="bold"
+             android:fontFamily="sans-serif-medium"
+             android:gravity="center"
+             android:layout_marginBottom="6dp"/>
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="Entre e descubra plantas com o poder da IA."
+             android:textColor="@color/texto_secundario"
+             android:textSize="14sp"
+             android:gravity="center"
+             android:layout_marginBottom="28dp"/>
+
+         <!-- Email -->
+         <com.google.android.material.textfield.TextInputLayout
+             android:id="@+id/txtInputLayoutEmail"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="16dp"
+             app:boxStrokeColor="@color/verde_claro"
+             app:hintTextColor="@color/verde_medio"
+             app:errorTextColor="@color/erro"
+             app:errorEnabled="true"
+             app:boxBackgroundMode="none"
+             app:hintEnabled="false"
+             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="E-mail"
+                android:textColor="@color/preto"
+                android:textColorHint="@color/cinza"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="12dp"
+                android:inputType="textEmailAddress|textNoSuggestions"
+                android:importantForAutofill="no"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:background="@drawable/background_edittext"
+                android:textSize="16sp"/>
+
+         </com.google.android.material.textfield.TextInputLayout>
+
+         <!-- Senha -->
+         <com.google.android.material.textfield.TextInputLayout
+             android:id="@+id/txtInputLayoutSenha"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="8dp"
+             app:boxStrokeColor="@color/verde_claro"
+             app:hintTextColor="@color/verde_medio"
+             app:errorTextColor="@color/erro"
+             app:errorEnabled="true"
+             app:passwordToggleEnabled="true"
+             app:passwordToggleTint="#4E7C59"
+             app:boxBackgroundMode="none"
+             app:hintEnabled="false"
+             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_senha"
+                android:textColor="@color/preto"
+                android:textColorHint="@color/cinza"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawablePadding="12dp"
+                android:inputType="numberPassword"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:background="@drawable/background_edittext"
+                android:textSize="16sp"/>
+
+         </com.google.android.material.textfield.TextInputLayout>
+
+         <!-- Esqueceu a senha -->
+         <TextView
+             android:id="@+id/txtEsqueciSenha"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="Esqueceu sua senha?"
+             android:textColor="@color/verde_medio"
+             android:textStyle="bold"
+             android:textSize="13sp"
+             android:gravity="end"
+             android:padding="4dp"
+             android:layout_marginBottom="20dp"/>
+
+         <!-- Botão Entrar -->
+         <androidx.appcompat.widget.AppCompatButton
+             android:id="@+id/btnEntrar"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="@string/txt_button_entrar"
+             android:textAllCaps="false"
+             android:padding="15dp"
+             android:background="@drawable/background_button_selector"
+             android:enabled="true"
+             android:layout_marginBottom="20dp"
+             android:textSize="16sp"
+             android:textColor="@color/texto_claro"
+             android:textStyle="bold"/>
+
+         <!-- Divisor "ou" -->
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:gravity="center_vertical"
+             android:layout_marginBottom="16dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/cinza_claro" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ou"
+                android:textColor="@color/texto_secundario"
+                android:textSize="12sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/cinza_claro" />
+         </LinearLayout>
+
+         <!-- Entrar com Google (ícone circular) -->
+         <ImageButton
+             android:id="@+id/btnGoogleLogin"
+             android:layout_width="48dp"
+             android:layout_height="48dp"
+             android:layout_gravity="center"
+             android:layout_marginBottom="20dp"
+             android:background="@drawable/bg_circle_google"
+             android:src="@drawable/ic_google_g"
+             android:padding="12dp"
+             android:scaleType="fitCenter"
+             android:contentDescription="Entrar com o Google" />
+
+         <!-- Link cadastro -->
+         <TextView
+             android:id="@+id/txtTelaCadastro"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="@string/txt_tela_cadastro"
+             android:textSize="15sp"
+             android:textColor="@color/texto_secundario"
+             android:gravity="center"/>
+
+      </LinearLayout>
+
+      <!-- ProgressBar -->
+      <ProgressBar
+          android:id="@+id/progressBar"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:visibility="gone"
+          android:layout_marginTop="24dp"
+          app:layout_constraintTop_toBottomOf="@id/cardLogin"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintBottom_toBottomOf="parent"/>
+
+      <!-- Fundo curvo inferior -->
+      <View
+          android:id="@+id/containerBottom"
+          android:layout_width="0dp"
+          android:layout_height="70dp"
+          android:layout_marginTop="24dp"
+          android:background="@drawable/background_view_bottom"
+          app:layout_constraintTop_toBottomOf="@id/cardLogin"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent" />
+
+      <ImageView
+          android:layout_width="34dp"
+          android:layout_height="46dp"
+          android:src="@drawable/ic_plant_decor"
+          android:rotation="-6"
+          app:layout_constraintStart_toStartOf="@id/containerBottom"
+          app:layout_constraintBottom_toBottomOf="@id/containerBottom"
+          android:layout_marginStart="70dp"
+          android:contentDescription="@null" />
+
+      <ImageView
+          android:layout_width="26dp"
+          android:layout_height="36dp"
+          android:src="@drawable/ic_plant_decor_small"
+          android:rotation="8"
+          android:scaleX="-1"
+          app:layout_constraintEnd_toEndOf="@id/containerBottom"
+          app:layout_constraintBottom_toBottomOf="@id/containerBottom"
+          android:layout_marginEnd="60dp"
+          android:contentDescription="@null" />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

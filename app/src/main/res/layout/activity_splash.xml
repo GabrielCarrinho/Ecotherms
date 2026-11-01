@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212">
+
+    <ImageView
+        android:id="@+id/ivSplashLogo"
+        android:layout_width="136dp"
+        android:layout_height="136dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo_splash_creme"
+        android:alpha="0"
+        android:contentDescription="Ecotherms" />
+
+    <LinearLayout
+        android:id="@+id/layoutSplashFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="68dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:alpha="0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="from"
+            android:textColor="#4E7C59"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.03" />
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/wordmark_splash_creme"
+            android:scaleType="fitCenter"
+            android:contentDescription="ecotherms" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_padding">28dp</dimen>
+    <dimen name="header_top_padding">20dp</dimen>
+    <dimen name="header_logo_size">52dp</dimen>
+    <dimen name="header_wordmark_width">140dp</dimen>
+    <dimen name="header_wordmark_height">72dp</dimen>
+    <dimen name="title_card_padding">24dp</dimen>
+    <dimen name="title_text_size">30sp</dimen>
+    <dimen name="chart_height">300dp</dimen>
+    <dimen name="plant_photo_height">340dp</dimen>
+    <dimen name="button_height">56dp</dimen>
+    <dimen name="bottom_nav_height">72dp</dimen>
+    <dimen name="bottom_nav_icon">30dp</dimen>
+    <dimen name="login_top_height">260dp</dimen>
+    <dimen name="login_logo_size">160dp</dimen>
+</resources>

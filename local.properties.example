@@ -1,0 +1,3 @@
+# Copie para local.properties (o Android Studio cria sdk.dir sozinho)
+# sdk.dir=C\:\\Users\\SEU_USUARIO\\AppData\\Local\\Android\\Sdk
+PLANTNET_API_KEY=cole_sua_chave_aqui

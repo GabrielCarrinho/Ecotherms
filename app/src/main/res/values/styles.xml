@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DrawerMenuItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingEnd">14dp</item>
+        <item name="android:paddingTop">13dp</item>
+        <item name="android:paddingBottom">13dp</item>
+        <item name="android:background">@drawable/bg_drawer_item</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="DrawerMenuIconBg">
+        <item name="android:layout_width">36dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:background">@drawable/bg_circle_gray_light</item>
+    </style>
+
+    <style name="DrawerMenuIcon">
+        <item name="android:layout_width">18dp</item>
+        <item name="android:layout_height">18dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:tint">#4E7C59</item>
+    </style>
+
+    <style name="DrawerMenuText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">14dp</item>
+        <item name="android:textColor">#1E3A29</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+</resources>

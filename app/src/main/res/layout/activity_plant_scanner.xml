@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawerLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/texto_claro">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/screen_padding">
+
+        <!-- Cabeçalho -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/header_top_padding"
+            android:paddingBottom="8dp">
+
+            <ImageButton
+                android:id="@+id/btnMenu"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_menu_hamburguer"
+                app:tint="@color/verde_escuro"
+                android:padding="6dp"
+                android:contentDescription="Menu" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:scaleType="fitStart"
+                android:src="@drawable/wordmark_ecotherms"
+                android:contentDescription="ecotherms" />
+
+            <ImageButton
+                android:id="@+id/btnNotifications"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_notification"
+                app:tint="@color/verde_escuro"
+                android:padding="7dp"
+                android:contentDescription="Notificações" />
+
+        </LinearLayout>
+
+        <!-- Divisória -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divisoria"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SCANNER DE PLANTAS"
+            android:textColor="@color/texto"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.2"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Câmera -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp">
+
+            <androidx.camera.view.PreviewView
+                android:id="@+id/previewView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card resultado + botão -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:cardBackgroundColor="@color/card"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RESULTADO"
+                    android:textColor="@color/texto"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1" />
+
+                <TextView
+                    android:id="@+id/tvResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Aponte para uma planta e capture"
+                    android:textColor="@color/texto"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnCapture"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginTop="12dp"
+                    android:text="IDENTIFICAR PLANTA"
+                    android:textColor="@color/texto_claro"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/botao" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <!-- Nav bar — igual ao activity_main.xml -->
+    <LinearLayout
+        android:id="@+id/bottomNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_nav_height"
+        android:orientation="horizontal"
+        android:background="@color/nav_bar"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="@dimen/bottom_nav_icon"
+                android:layout_height="@dimen/bottom_nav_icon"
+                android:src="@drawable/ic_home_novo"
+                android:contentDescription="Home"
+                app:tint="@color/texto_claro" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Início"
+                    android:textColor="@color/texto_claro"
+                    android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navChart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="@dimen/bottom_nav_icon"
+                android:layout_height="@dimen/bottom_nav_icon"
+                android:src="@drawable/ic_grafico_novo"
+                android:contentDescription="Gráfico"
+                app:tint="@color/texto_claro" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Gráficos"
+                    android:textColor="@color/texto_claro"
+                    android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navPlants"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="@dimen/bottom_nav_icon"
+                android:layout_height="@dimen/bottom_nav_icon"
+                android:src="@drawable/ic_scanner_novo"
+                android:contentDescription="Scanner"
+                app:tint="@color/texto_claro" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Scanner"
+                    android:textColor="@color/texto_claro"
+                    android:textSize="10sp" android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="@dimen/bottom_nav_icon"
+                android:layout_height="@dimen/bottom_nav_icon"
+                android:src="@drawable/ic_person"
+                android:contentDescription="Perfil"
+                app:tint="@color/texto_claro" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Perfil"
+                    android:textColor="@color/texto_claro"
+                    android:textSize="10sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    <!-- Painel do menu lateral -->
+    <LinearLayout
+        android:id="@+id/navDrawer"
+        android:layout_width="288dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        android:background="@color/cinza_claro"
+        android:paddingTop="36dp"
+        android:fitsSystemWindows="true">
+
+        <!-- Cabeçalho do menu -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="22dp">
+
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/logo_ecotherms"
+                android:contentDescription="Logo Ecotherms" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/wordmark_ecotherms"
+                android:contentDescription="ecotherms" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D8E0D4"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Itens do menu -->
+        <LinearLayout
+            android:id="@+id/drawerItemHistory"
+            style="@style/DrawerMenuItem">
+
+            <FrameLayout style="@style/DrawerMenuIconBg">
+                <ImageView style="@style/DrawerMenuIcon" android:src="@drawable/ic_plant" />
+            </FrameLayout>
+
+            <TextView style="@style/DrawerMenuText" android:text="Histórico de Plantas" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/drawerItemProfile"
+            style="@style/DrawerMenuItem">
+
+            <FrameLayout style="@style/DrawerMenuIconBg">
+                <ImageView style="@style/DrawerMenuIcon" android:src="@drawable/ic_person" />
+            </FrameLayout>
+
+            <TextView style="@style/DrawerMenuText" android:text="Meu Perfil" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/drawerItemPreferences"
+            style="@style/DrawerMenuItem">
+
+            <FrameLayout style="@style/DrawerMenuIconBg">
+                <ImageView style="@style/DrawerMenuIcon" android:src="@drawable/ic_notification" />
+            </FrameLayout>
+
+            <TextView style="@style/DrawerMenuText" android:text="Preferências" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/drawerItemSettings"
+            style="@style/DrawerMenuItem">
+
+            <FrameLayout style="@style/DrawerMenuIconBg">
+                <ImageView style="@style/DrawerMenuIcon" android:src="@drawable/ic_settings" />
+            </FrameLayout>
+
+            <TextView style="@style/DrawerMenuText" android:text="Configurações" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D8E0D4"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:id="@+id/drawerItemLogout"
+            style="@style/DrawerMenuItem"
+            android:layout_marginBottom="20dp">
+
+            <FrameLayout style="@style/DrawerMenuIconBg">
+                <ImageView style="@style/DrawerMenuIcon" android:src="@drawable/ic_logout" android:tint="#C0392B" />
+            </FrameLayout>
+
+            <TextView style="@style/DrawerMenuText" android:text="Sair" android:textColor="#C0392B" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
